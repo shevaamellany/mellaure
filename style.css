@@ -59,7 +59,7 @@ body {
 }
 
 .ebook-img {
-    width: 180%;
+    width: 180px;
     border-radius: 1rem;
     transition: transform 0.3s ease;
     padding: 10px;
@@ -318,6 +318,7 @@ body {
         margin: 0 auto;
     }
 }
+
 
 
 
