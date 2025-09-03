@@ -14,7 +14,6 @@ body {
     border-bottom-right-radius: 40px;
     overflow: hidden;
     background: linear-gradient(to bottom, #964d4d, #F3CECE);
-    padding: 2rem 2rem;
     position: relative;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
@@ -50,12 +49,6 @@ body {
 
 
 /* ===== EBOOK ===== */
-.E-Book {
-    background-color: #ffff;
-    padding: 2rem;
-    text-align: center;
-    font-weight: bold;
-}
 
 .ebook-items {
     display: flex;
@@ -129,6 +122,7 @@ body {
     background: #F3CECE;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
     overflow-x: auto; /* biar aman kalau terlalu sempit */
 }
 
@@ -165,7 +159,7 @@ body {
 }
 
 .btn-container {
-    text-align: right;
+    text-align: center;
     margin-top: 15px;
 }
 
