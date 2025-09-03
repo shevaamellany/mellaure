@@ -20,39 +20,36 @@ body {
 }
 
 .navbar {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    background-color: #FFFFFF80;
-    padding: 0.8rem 2rem;
-    border-radius: 30px;
-    box-shadow: 3px 5px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-}
-
-.navbar .nav-links {
-    list-style: none;
     display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: linear-gradient(to bottom, #964d4d, #F3CECE);
+    border-radius: 0 0 20px 20 px;
 }
 
-.navbar .nav-links li a {
+.navbar .logo {
+    height: 50px;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu a {
     text-decoration: none;
-    color: #000000;
+    color: #000;
     font-weight: bold;
     font-size: 1rem;
+    border-radius: 20px;
     transition: color 0.3s;
 }
 
-.navbar .nav-links li a:hover {
-    color: #964d4d;
+.navbar .menu a:hover {
+    color: #ffff;
 }
 
-.logo-img {
-    width: 100px;
-}
 
 /* ===== EBOOK ===== */
 .E-Book {
@@ -91,11 +88,13 @@ body {
     background: #F3CECE;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow-x: auto; /* biar aman kalau terlalu sempit */
 }
 
 .payment-table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed; /* biar cell nggak loncat-loncat */
 }
 
 .payment-table td {
@@ -103,6 +102,7 @@ body {
     border-bottom: 1px solid #964d4d;
     vertical-align: middle;
     font-size: 16px;
+    word-wrap: break-word;
 }
 
 .pay-logo {
@@ -148,6 +148,38 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
+/* 🔽 Responsif untuk HP */
+@media (max-width: 600px) {
+    .payment-section {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .payment-table td {
+        padding: 10px;
+        font-size: 14px; /* lebih kecil di HP */
+    }
+
+    .pay-logo {
+        width: 45px; /* logo diperkecil */
+    }
+
+    .payment-table button {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .btn-wa {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .reminder {
+        font-size: 13px;
+    }
+}
+
 
 /* ===== TESTIMONI ===== */
 .testimoni {
