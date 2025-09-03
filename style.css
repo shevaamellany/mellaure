@@ -29,12 +29,11 @@ body {
 }
 
 .navbar .logo {
-    height: 40px;
+    height: 50px;
 }
 
 .navbar .menu {
     display: flex;
-    gap: 10px;
 }
 
 .navbar .menu a {
@@ -52,7 +51,7 @@ body {
 
 /* ===== EBOOK ===== */
 .E-Book {
-    background-color: #350e0e96;
+    background-color: #ffff;
     padding: 2rem;
     text-align: center;
     font-weight: bold;
@@ -78,6 +77,49 @@ body {
     transform: scale(1.1);
     z-index: 1;
 }
+
+.card-section {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #F3CECE;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.scroll-card {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.scroll-card::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-card::-webkit-scrollbar-thumb {
+  background: #964d4d;
+  border-radius: 10px;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 180px; /* ukuran kartu */
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 
 /* ===== PAYMENT ===== */
 .payment-section {
@@ -179,13 +221,11 @@ body {
 
 /* ===== TESTIMONI ===== */
 .testimoni {
-    background-color: #964d4d;
-    padding: 3rem;
-    text-align: center;
+    background-color: #ffff;
 }
 
-.testimoni .subtitle {
-    color: #ffffff;
+.subtitle {
+    text-align: center;
     font-weight: 600;
 }
 
@@ -193,7 +233,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: center;
     margin-top: 1rem;
 }
 
@@ -202,6 +241,10 @@ body {
     transition: transform 0.3s ease;
     padding: 5px;
     cursor: pointer;
+}
+
+.testi-img:hover {
+    transform: scale(1.1);
 }
 
 /* ===== FOOTER ===== */
@@ -241,34 +284,6 @@ body {
     transform: scale(1.2);
 }
 
-/* ===== FORM FEEDBACK ===== */
-.feedback-input {
-    width: 100%;
-    padding: 0.6rem;
-    border-radius: 12px;
-    border: none;
-    margin-top: 0.5rem;
-    font-family: inherit;
-    font-size: 0.9rem;
-    background-color: #f8dada;
-    color: #333;
-}
-
-.feedback-btn {
-    margin-top: 0.5rem;
-    padding: 0.4rem 1rem;
-    border: none;
-    border-radius: 20px;
-    background-color: #5c2c2c;
-    color: #fff;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.feedback-btn:hover {
-    background-color: #422020;
-}
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media screen and (max-width: 900px) {
@@ -318,5 +333,4 @@ body {
         margin: 0 auto;
     }
 }
-
 
